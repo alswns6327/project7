@@ -80,9 +80,7 @@ div {
 }
 footer{
 	width: 100%;
-	position: relative;
-	bottom: -200%;
-	left: 0;
+
 }
 
 .subscribe-box {
@@ -302,6 +300,33 @@ hr.hr {
 					</div>	 	
 				</form>	 
 			</c:forEach>
+			<!-- 구독취소, 회원탈퇴, 구독권변경 -->
+			<br>
+			<hr/>
+			<br>
+			<div align="center" style="display: flex;">
+				<div style="width: 20%;">
+					<button type="button" class="btn btn-secondary">회원탈퇴</button>
+				</div>
+				<div style="width: 20%;">
+
+				</div>
+				<c:if test="${memberVO.grade!=0}">
+					<div style="width: 20%;">
+						<button type="button" class="btn btn-secondary">구독취소</button>
+					</div>
+				</c:if>
+				<div style="width: 20%;">
+
+				</div>
+				<c:if test="${memberVO.grade!=0}">
+					<div style="width: 20%;">
+						<button type="button" class="btn btn-secondary">구독권변경</button>
+					</div>
+				</c:if>
+			</div>
+	<br/><br/>
+	<br/><br/>
 	</div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
